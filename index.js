@@ -1,5 +1,5 @@
 // Write your solution here!
-// helpers.js (or index.js)
+
 let cats = ["Milo", "Otis", "Garfield"];
 
 function destructivelyAppendCat(name) {
