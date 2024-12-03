@@ -1,7 +1,6 @@
-// Write your solution here!
-
 let cats = ["Milo", "Otis", "Garfield"];
 
+// Function Definitions
 function destructivelyAppendCat(name) {
   cats.push(name);
 }
@@ -34,14 +33,27 @@ function removeFirstCat() {
   return cats.slice(1);
 }
 
-module.exports = {
-  cats,
-  destructivelyAppendCat,
-  destructivelyPrependCat,
-  destructivelyRemoveLastCat,
-  destructivelyRemoveFirstCat,
-  appendCat,
-  prependCat,
-  removeLastCat,
-  removeFirstCat
-};
+// functions testing
+destructivelyAppendCat("Buster");
+console.log("After destructivelyAppendCat:", cats);  // ["Milo", "Otis", "Garfield", "Buster"]
+
+destructivelyPrependCat("Felix");
+console.log("After destructivelyPrependCat:", cats);  // ["Felix", "Milo", "Otis", "Garfield", "Buster"]
+
+destructivelyRemoveLastCat();
+console.log("After destructivelyRemoveLastCat:", cats);  // ["Felix", "Milo", "Otis", "Garfield"]
+
+destructivelyRemoveFirstCat();
+console.log("After destructivelyRemoveFirstCat:", cats);  // ["Milo", "Otis", "Garfield"]
+
+let newCats1 = appendCat("Tom");
+console.log("After appendCat:", newCats1);  // ["Milo", "Otis", "Garfield", "Tom"]
+
+let newCats2 = prependCat("Sylvester");
+console.log("After prependCat:", newCats2);  // ["Sylvester", "Milo", "Otis", "Garfield"]
+
+let newCats3 = removeLastCat();
+console.log("After removeLastCat:", newCats3);  // ["Milo", "Otis"]
+
+let newCats4 = removeFirstCat();
+console.log("After removeFirstCat:", newCats4);  // ["Otis", "Garfield"]
